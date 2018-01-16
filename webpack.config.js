@@ -7,5 +7,13 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: 'myApp.bundle.js'
-  }
+  },
+  module: {
+         loaders: [
+             {
+                 test: /\.js$/,
+                 loader: 'babel-loader',
+             }
+         ]
+     },
 }
